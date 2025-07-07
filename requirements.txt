@@ -1,3 +1,4 @@
 joblib
 tensorflow
 matplotlib
+sklearn
