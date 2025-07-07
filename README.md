@@ -56,5 +56,7 @@ This project uses **two models** trained on EEG signal features:
 cd eeg-mental-health-app pip install -r requirements.txt 
 streamlit run App.py</code></pre>
 
+---
+
 ##📄 License
 This project is open-source and available under the MIT License.
