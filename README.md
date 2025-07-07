@@ -1,68 +1,60 @@
-# 🧠 EEG Mental Health Classifier
+# 🧠 EEG-Based Mental Health Analysis App
 
-Live Demo 👉 [https://eeg-mental-health-app-khare.streamlit.app](https://eeg-mental-health-app-khare.streamlit.app)
+This is a Streamlit-based web application for analyzing EEG signals to classify **depression severity** and predict **HAMD scores** using deep learning models.
 
-An end-to-end **Deep Learning web app** for predicting mental health severity levels using EEG data. Built using a **CNN model** and deployed via **Streamlit Cloud**.
-
----
-
-## 📌 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Model Details](#model-details)
-- [Setup Instructions (Local)](#setup-instructions-local)
-- [Screenshots](#screenshots)
-- [Credits](#credits)
-- [License](#license)
+🚀 Try the App: [Click here to open](https://eeg-mental-health-app-khare.streamlit.app/)
 
 ---
 
-## Overview
+## 📁 Dataset
 
-This web app leverages **Electroencephalography (EEG)** signal features to classify the **severity of mental health conditions** into three categories: **Low**, **Mild**, and **High**. The model used is a **Convolutional Neural Network (CNN)** trained on processed EEG features extracted from `.mat` files.
-
----
-
-## Features
-
-- 📂 Upload EEG `.mat` files directly in the app  
-- 🧠 Predict severity levels of mental health conditions  
-- 📊 Display predictions and allow CSV download  
-- 🖥 Sleek and interactive UI with Streamlit Tabs  
-- 🌐 Fully deployed online — no installation required
-
----
-
-## Tech Stack
-
-| Layer      | Technology               |
-|------------|---------------------------|
-| UI         | Streamlit                |
-| Model      | TensorFlow + Keras (CNN) |
-| Data       | EEG Signals from `.mat`  |
-| Others     | Pandas, NumPy, SciPy, Joblib |
+- **Name**: `CIP_signal_all_FT7.mat`
+- **Source**: Private research EEG dataset from a mental health study.
+- **Content**:
+  - EEG signal features recorded from the **FT7** channel.
+  - Labels include:
+    - `severity`: Multiclass depression severity levels (1–33)
+    - `depression`: Binary label (0 = No Depression, 1 = Depression)
+    - `HAMD`: Continuous target score for regression tasks (Hamilton Depression Rating Scale)
+- **Preprocessing**:
+  - Extracted feature matrix and label vectors.
+  - Scaled/standardized signals for deep learning input.
+  - Mapped `severity` into 3 classes: **Low**, **Mild**, **High**
 
 ---
 
-## Model Details
+## 🧠 Model Details
 
-- **Dataset:** `CIP_signal_all_FT7.mat` (EEG data)
-- **Features:** 1024-length vector per sample
-- **Target:** 20+ severity labels → grouped into 3 (Low/Mild/High)
-- **Model:** CNN
-- **Accuracy:** ~90.6%
-- **Preprocessing:** Normalization, Label grouping
+This project uses **two models** trained on EEG signal features:
+
+### 1. 🧩 CNN Classifier
+- **Task**: Multiclass classification of depression severity (`Low`, `Mild`, `High`)
+- **Architecture**: 1D Convolutional Neural Network (CNN)
+- **Performance**: ✅ Accuracy = **90.6%**
+
+### 2. 📈 CNN Regression Model
+- **Task**: Predict **HAMD (Hamilton Depression Rating Scale)** score
+- **Architecture**: CNN with linear output
+- **Metric**: Mean Squared Error (MSE) on test set
 
 ---
 
-## Setup Instructions (Local)
+## 💻 App Features
+
+- Upload `.mat` EEG files (from the FT7 channel)
+- Run classification (Low/Mild/High depression)
+- Predict the HAMD score
+- Visual outputs, download results as CSV
+- Fully interactive and browser-based with Streamlit
+
+---
+
+## 🚀 Installation & Run
+
+
 <pre><code>git clone https://github.com/lakkshitkhare/eeg-mental-health-app.git 
 cd eeg-mental-health-app pip install -r requirements.txt 
 streamlit run App.py</code></pre>
 
-## 🙌 Credits
-- Developed by **Lakkshit Khare**
-- Dataset: **CIP EEG Signal Data**
-- Model: **CNN trained on EEG features**
-- Thanks to the **Streamlit** and **TensorFlow** communities
+##📄 License
+This project is open-source and available under the MIT License.
