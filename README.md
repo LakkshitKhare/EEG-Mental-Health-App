@@ -1,75 +1,97 @@
-🧠 EEG Mental Health Classifier
-Live Demo 👉 eeg-mental-health-app-khare.streamlit.app
+Here’s your complete `README.md` write-up:
 
-An end-to-end Deep Learning web app for predicting mental health severity levels from EEG data using a CNN model.
+---
 
-📌 Table of Contents
-Overview
+# 🧠 EEG Mental Health Classifier
 
-Features
+Live Demo 👉 [https://eeg-mental-health-app-khare.streamlit.app](https://eeg-mental-health-app-khare.streamlit.app)
 
-Tech Stack
+An end-to-end **Deep Learning web app** for predicting mental health severity levels using EEG data. Built using a **CNN model** and deployed via **Streamlit Cloud**.
 
-Model Details
+---
 
-Setup Instructions
+## 📌 Table of Contents
 
-Screenshots
+* [Overview](#overview)
+* [Features](#features)
+* [Tech Stack](#tech-stack)
+* [Model Details](#model-details)
+* [Setup Instructions](#setup-instructions)
+* [Screenshots](#screenshots)
+* [Credits](#credits)
 
-Credits
+---
 
-🔍 Overview
-This project uses EEG signals to predict the severity level of mental health conditions using a Convolutional Neural Network (CNN). The app is built with Streamlit and deployed publicly for demonstration and analysis.
+## 🔍 Overview
 
-✅ Features
-Upload EEG features from .mat file
+This web app leverages **Electroencephalography (EEG)** signal features to classify the **severity of mental health conditions** into three categories: **Low**, **Mild**, and **High**. The model used is a **Convolutional Neural Network (CNN)** trained on processed EEG features extracted from `.mat` files.
 
-Predict severity: Low, Mild, High
+---
 
-Download predictions in CSV format
+## ✅ Features
 
-Clean, tab-based UI with result visualizations
+* 📂 Upload EEG `.mat` files directly in the app
+* 🧠 Predict severity levels of mental health conditions
+* 📊 Display predictions and allow CSV download
+* 🖥 Sleek and interactive UI with Streamlit Tabs
+* 🌐 Fully deployed online — no installation required
 
-Fully deployed with no setup required
+---
 
-🧪 Model Details
-Item	Description
-Dataset	CIP_signal_all_FT7.mat (EEG Signals)
-Features	1024 signal features
-Labels (Target)	Severity levels (20+ classes → grouped into 3)
-Model Used	CNN
-Accuracy	~90.6% (on test set)
-Preprocessing	Normalization, class grouping
+## 🛠 Tech Stack
 
-🛠 Tech Stack
-Frontend: Streamlit
+| Layer  | Technology                   |
+| ------ | ---------------------------- |
+| UI     | Streamlit                    |
+| Model  | TensorFlow + Keras (CNN)     |
+| Data   | EEG Signals from `.mat`      |
+| Others | Pandas, NumPy, SciPy, Joblib |
 
-Backend/Model: TensorFlow/Keras (CNN)
+---
 
-Deployment: Streamlit Cloud
+## 🧪 Model Details
 
-Others: scipy, pandas, joblib, numpy
+* **Dataset:** `CIP_signal_all_FT7.mat` (EEG data)
+* **Features:** 1024-length vector per sample
+* **Target:** 20+ severity labels → grouped into 3 (Low/Mild/High)
+* **Model:** CNN
+* **Accuracy:** \~90.6%
+* **Preprocessing:** Normalization, Label grouping
 
-🚀 Setup Instructions (Local)
-bash
-Copy
-Edit
+---
+
+## 🚀 Setup Instructions (Local)
+
+```bash
 git clone https://github.com/lakkshitkhare/eeg-mental-health-app.git
 cd eeg-mental-health-app
 pip install -r requirements.txt
 streamlit run App.py
-🖼 Screenshots
-<details> <summary>🔎 Click to expand</summary>
+```
 
+---
+
+## 🖼 Screenshots
+
+<details>
+<summary>🔍 Expand to view</summary>
+
+![Homepage](screenshots/homepage.png)
+![Prediction](screenshots/prediction.png)
 
 </details>
-🙋‍♂️ Credits
-Developed by Lakkshit Khare
 
-EEG Dataset: CIP_signal_all_FT7.mat
+---
 
-Thanks to open-source contributors and Streamlit community
+## 🙋‍♂️ Credits
 
-📌 License
-This project is licensed under the MIT License.
+* Developed by [Lakkshit Khare](https://github.com/lakkshitkhare)
+* Dataset: CIP EEG Signal Data
+* Model: CNN trained on EEG features
+* Thanks to the Streamlit community and TensorFlow team
 
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE)
