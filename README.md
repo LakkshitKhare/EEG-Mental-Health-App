@@ -58,18 +58,13 @@ This web app leverages **Electroencephalography (EEG)** signal features to class
 
 ## Setup Instructions (Local)
 
-```bash
 git clone https://github.com/lakkshitkhare/eeg-mental-health-app.git
 cd eeg-mental-health-app
 pip install -r requirements.txt
-streamlit run App.py```
+streamlit run App.py
 
-Credits
-Developed by Lakkshit Khare
-
-Dataset: CIP EEG Signal Data
-
-Model: CNN trained on EEG features
-
-Thanks to the Streamlit community and TensorFlow team
-
+## 🙌 Credits
+- Developed by **Lakkshit Khare**
+- Dataset: **CIP EEG Signal Data**
+- Model: **CNN trained on EEG features**
+- Thanks to the **Streamlit** and **TensorFlow** communities
