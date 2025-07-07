@@ -59,7 +59,7 @@ This web app leverages **Electroencephalography (EEG)** signal features to class
 ## Setup Instructions (Local)
 <pre><code>git clone https://github.com/lakkshitkhare/eeg-mental-health-app.git 
 cd eeg-mental-health-app pip install -r requirements.txt 
-streamlit run App.py ```</code></pre>
+streamlit run App.py</code></pre>
 
 ## 🙌 Credits
 - Developed by **Lakkshit Khare**
